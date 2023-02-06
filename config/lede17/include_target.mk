@@ -13,7 +13,7 @@ __target_inc=1
 DEVICE_TYPE?=router
 
 # Default packages - the really basic set
-DEFAULT_PACKAGES:=base-files dropbear fstools kmod-ipt-raw kmod-nf-nathelper kmod-nf-nathelper-extra libc libgcc libustream-openssl logd luci luci-app-arpbind luci-app-autoreboot mtd netifd opkg uci uclient-fetch urandom-seed
+DEFAULT_PACKAGES:=base-files busybox dropbear fstools kmod-ipt-raw kmod-nf-nathelper kmod-nf-nathelper-extra libc libgcc libustream-openssl logd luci luci-app-arpbind luci-app-autoreboot mtd netifd opkg uci uclient-fetch urandom-seed
 # For nas targets
 DEFAULT_PACKAGES.nas:=block-mount fdisk lsblk mdadm
 # For router targets
