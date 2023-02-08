@@ -78,7 +78,7 @@ jobs:
         cp -f config/include_target.mk openwrt/include/target.mk
         cp -f config/mt7621non.mk openwrt/target/linux/ramips/image/mt7621.mk
         cp -f config/mt7621_raisecom_msg1500-x-00.dts openwrt/target/linux/ramips/dts/mt7621_raisecom_msg1500-x-00.dts
-        cp -f config/01_leds openwrt/target/linux/ramips/mt7621/base-files/etc/board.d/01_leds
+        cp -f config/01_ledsnon openwrt/target/linux/ramips/mt7621/base-files/etc/board.d/01_leds
         cp -f config/02_network openwrt/target/linux/ramips/mt7621/base-files/etc/board.d/02_network
         touch openwrt/target/linux/ramips/Makefile
         chmod +x $DIY_P2_SH
