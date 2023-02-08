@@ -75,6 +75,15 @@ jobs:
       run: |
         [ -e files ] && mv files openwrt/files
         [ -e $CONFIG_FILE ] && mv $CONFIG_FILE openwrt/.config
+        sudo rm -rf openwrt/package/lean/mt
+        mkdir temp
+        cd temp
+        git clone --recursive https://github.com/coolsnowwolf/lede
+        cd lede/package/lean/
+        cp -r mt /home/runner/work/OpenWrt-msg/OpenWrt-msg/openwrt/package/lean/
+        cd /home/runner/work/OpenWrt-msg/OpenWrt-msg/
+        cd openwrt && ./scripts/feeds install -a
+        cd ..
         cp -f config/lede17/include_target.mk openwrt/include/target.mk
         cp -f config/lede17/mt7621.mk openwrt/target/linux/ramips/image/mt7621.mk
         cp -f config/lede17/mt7621_raisecom_msg1500-x-00.dts openwrt/target/linux/ramips/dts/mt7621_raisecom_msg1500-x-00.dts
