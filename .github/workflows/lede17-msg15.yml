@@ -80,8 +80,8 @@ jobs:
         cd temp
         git clone --recursive https://github.com/coolsnowwolf/lede
         cd lede/package/lean/
-        cp -r mt /home/runner/work/OpenWrt-msg/OpenWrt-msg/openwrt/package/lean/
-        cd /home/runner/work/OpenWrt-msg/OpenWrt-msg/
+        cp -r mt /home/runner/work/lede-msg/lede-msg/openwrt/package/lean/
+        cd /home/runner/work/lede-msg/lede-msg/
         cd openwrt && ./scripts/feeds install -a
         cd ..
         cp -f config/lede17/include_target.mk openwrt/include/target.mk
