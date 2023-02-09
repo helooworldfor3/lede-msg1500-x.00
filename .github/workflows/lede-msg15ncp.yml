@@ -78,7 +78,7 @@ jobs:
         cd temp && git clone --recursive https://github.com/open0072023/nanchuci
         cd lede/package/lean && cp -r mt /home/runner/work/lede-msg/lede-msg/openwrt/package/lean/
         cd /home/runner/work/lede-msg/lede-msg/openwrt && ./scripts/feeds install -a
-		
+
     - name: Load custom configuration
       run: |
         [ -e files ] && mv files openwrt/files
