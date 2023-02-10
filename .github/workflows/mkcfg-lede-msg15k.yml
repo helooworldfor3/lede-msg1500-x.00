@@ -22,7 +22,7 @@ on:
 env:
   REPO_URL: https://github.com/coolsnowwolf/lede
   REPO_BRANCH: master
-  DEVICE_NAME: msg15k
+  DEVICE_NAME: raisecom_msg1500-x-00
   FILES: config/files
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: config/lede-msg15k.config
@@ -98,7 +98,7 @@ jobs:
         mkdir -p /tmp/upload
         cp .config /tmp/upload
 
-    - name: 上传配置文件
+    - name: Upload config directory
       uses: actions/upload-artifact@main
       with:
         name: OpenWrt-${{ env.DEVICE_NAME }}-Config
