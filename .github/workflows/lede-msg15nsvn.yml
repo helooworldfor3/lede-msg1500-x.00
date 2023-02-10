@@ -8,7 +8,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: lede-msg15ndo
+name: lede-msg15nsvn
 
 on:
   repository_dispatch:
@@ -138,7 +138,7 @@ jobs:
       uses: actions/upload-artifact@main
       if: steps.organize.outputs.status == 'success' && !cancelled()
       with:
-        name: lede-msg15n${{ env.FILE_DATE }}
+        name: lede-msg15nsvn${{ env.FILE_DATE }}
         path: ${{ env.FIRMWARE }}
 
     - name: Upload firmware to cowtransfer
