@@ -1205,8 +1205,8 @@ define Device/netgear_r6220
   SERCOMM_HWVER := A001
   SERCOMM_SWVER := 0x0086
   IMAGE_SIZE := 28672k
-  DEVICE_PACKAGES += kmod-mt76x2
-  SUPPORTED_DEVICES += r6220
+  DEVICE_PACKAGES := -luci-newapi -wpad-openssl kmod-mt7603e kmod-mt76x2e kmod-usb3 \
+	kmod-usb-ledtrig-usbport wireless-tools
 endef
 TARGET_DEVICES += netgear_r6220
 
