@@ -76,6 +76,8 @@ jobs:
         [ -e files ] && mv files openwrt/files
         [ -e $CONFIG_FILE ] && mv $CONFIG_FILE openwrt/.config
         cp -f config/include_target.mk openwrt/include/target.mk
+        cp -f config/mt7621_netgear_sercomm_ayx.dtsi openwrt/target/linux/ramips/dts/mt7621_netgear_sercomm_ayx.dtsi
+        cp -f config/02_network openwrt/target/linux/ramips/mt7621/base-files/etc/board.d/02_network
         touch openwrt/target/linux/ramips/Makefile
         chmod +x $DIY_P2_SH
         cd openwrt
